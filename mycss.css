@@ -29,18 +29,21 @@ body {
     text-align: center;
     margin-top: 50px;
 }
+
 .line1{
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.1px;
     line-height: 1.5;
 }
+
 .line2{
     float: left; color: rgb(95,99,104);
     font-size: 14px;
     line-height: 1.4286;
     margin: 32px 0px 14px 0px;
 }
+
 .mylink, .mylink:hover, .mylink:visited, .mylink:active, .mylink:focus{
     float:left; margin: 0 -3px;
     padding: 0 3px;
@@ -54,6 +57,7 @@ body {
     outline: 0;
     position: relative;
 }
+
 .simple-link, .simple-link:hover, .simple-link:visited, .simple-link:active, .simple-link:focus{
     border-radius: 4px;
     color: rgb(60,64,67);
@@ -61,6 +65,7 @@ body {
     text-decoration: none;
     transition: background .2s;
 }
+
 .blue-button, .blue-button:focus, .blue-button:active{
     font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
     border-radius: 4px;
@@ -80,6 +85,7 @@ body {
     border: 0;
 
 }
+
 .create-button{
     font-family: "Google Sans",Roboto,Arial,sans-serif;
     border-radius: 4px;
@@ -98,10 +104,12 @@ body {
     padding: 7px 5px;
     border: 0;
 }
+
 .create-button:hover{
     color: rgba(23, 78, 166, 0.91);
     background-color: rgb(244, 244, 255);
 }
+
 .btn:focus{
     outline: 0;
 }
@@ -184,20 +192,24 @@ body {
     border-radius: 15px;
 
 }
+
 .show-user:hover{
     background-color: rgba(244, 255, 244, 0.6);
 }
+
 .ellipsis-container {
     max-width: 300px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .floating-label-group {
     position: relative;
     margin-top: 15px;
     margin-bottom: 25px;
 }
+
 .floating-label {
     font: 400 16px Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
     color: rgba(31, 37, 38, 0.79);
@@ -218,9 +230,11 @@ input:not(:focus):valid ~ .floating-label {
     opacity: 1;
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
 }
+
 input:focus ~ .floating-label{
     color: rgb(42, 134, 192);
 }
+
 .welcome{
     color: black;
     font-size: 23px;
@@ -230,9 +244,18 @@ input:focus ~ .floating-label{
     word-break: break-word;
     padding-top: 15px;
 }
+
 p.welcome, p.head{
     margin-bottom: 0.5rem;
 }
+
+.error-contex{
+    text-align: left;
+    color: rgb(217,48,37);
+    margin-top: 5px;
+    font-size: 12px;
+}
+
 input[type="checkbox"] {
     width: 17px;
     height: 17px;
@@ -240,25 +263,31 @@ input[type="checkbox"] {
     border-radius: 2px !important;
     cursor: pointer;
 }
+
 .form-check-input:focus{
     border: #7d7b7b solid 2px;
     border-radius: 2px !important;
     box-shadow: none;
 }
+
 .form-check-input[type=checkbox]:checked {
     background-image: none;
     background-color: #3b71ca;
 }
+
 .form-check-input:checked:focus:before, .form-check-input:checked:hover:before {
     box-shadow: 0px 0px 0px 13px #3b71ca;
 }
+
 .form-check-input:not(:checked):hover:before, .form-check-input:not(:checked):focus:before{
     box-shadow: 0px 0px 0px 13px gray;
     background-color: gray;
 }
+
 .form-check-input:focus:before, .form-check-input:hover:before {
     transform: scale(1);
 }
+
 .form-check-input:focus:before, .form-check-input:hover:before {
     content: "";
     position: absolute;
@@ -267,15 +296,14 @@ input[type="checkbox"] {
     width: 0.875rem;
     height: 0.875rem;
 }
-.form-check-input:checked:focus:before {
+.form-check-input:checked:focus:before, .form-check-input:not(:checked):focus:before {
     opacity: .1 !important;
 }
-.form-check-input:not(:checked):focus:before {
-    opacity: .1 !important;
-}
+
 .form-check-input:hover:before {
     opacity: .05;
 }
+
 .form-check-input[type=checkbox]:checked:after {
     content: "";
     position: absolute;
@@ -294,9 +322,11 @@ input[type="checkbox"] {
     margin-top: -1px;
     background-color: rgba(0,0,0,0);
 }
+
 .form-check-input:checked {
      border-color: #3b71ca;
 }
+
 input[type="password"] {
     font-size: 30px;
 }

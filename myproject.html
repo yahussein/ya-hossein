@@ -19,13 +19,13 @@
             <div class="floating-label-group">
                 <input ng-style="(showError || notValid) && {'border-color': 'red'}" type="text" id="Username"  class="form-control" ng-model="EmailOrPhone" ng-focus="setFocus()" ng-blur="removeFocus()" autocomplete="off" autofocus required/>
                 <label class="floating-label" ng-style="(showError || notValid) && (EmailOrPhone || Focus) && {'color': 'rgb(217,48,37)'}"><span style="margin: 0px 5px;">Email or phone</span></label>
-                <div ng-if="showError"  style="text-align: left; color: rgb(217,48,37); margin-top: 5px; font-size: 12px;">
+                <div ng-if="showError" class="error-contex">
                     <span>
                         <svg aria-hidden="true" class="stUf5b qpSchb" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
                     </span>
                     Enter an email or phone number
                 </div>
-                <div ng-if="notValid"  style="text-align: left; color: rgb(217,48,37); margin-top: 5px; font-size: 12px;">
+                <div ng-if="notValid" class="error-contex">
                     <span>
                         <svg aria-hidden="true" class="stUf5b qpSchb" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
                     </span>
@@ -56,7 +56,7 @@
             <div class="floating-label-group">
                 <input ng-style="showError && {'border-color': 'red'}" type="password" id="Password" class="form-control" ng-model="myPassword" ng-focus="setFocus()" ng-blur="removeFocus()" autocomplete="off" autofocus required/>
                 <label class="floating-label" ng-style="showError && (myPassword || Focus) && {'color': 'rgb(217,48,37)'}"><span style="margin: 0px 5px;">Enter your password</span></label>
-                <div ng-if="showError"  style="text-align: left; color: rgb(217,48,37); font-size: 12px; margin-top: 5px">
+                <div ng-if="showError"  class="error-contex">
                     <span>
                         <svg aria-hidden="true" class="stUf5b qpSchb" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
                     </span>
