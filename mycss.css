@@ -11,7 +11,7 @@ body {
 }
 
 .head{
-    font-weight: 400;
+    font-weight: 500;
     font-size: 24px;
     padding-top: 12px;
     line-height: 1.3333;
@@ -25,7 +25,7 @@ body {
     border-radius: 8px;
     border: 1px solid #dadce0;
     width: 100%;
-    min-height: 500px;
+    min-height: 510px;
     text-align: center;
     margin-top: 50px;
 }
@@ -62,6 +62,7 @@ body {
     transition: background .2s;
 }
 .blue-button, .blue-button:focus, .blue-button:active{
+    font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
     border-radius: 4px;
     color: rgb(26,115,232);
     display: inline-block;
@@ -71,18 +72,18 @@ body {
     position: relative;
     background-color: transparent;
     cursor: pointer;
-    font-size: inherit;
+    font-size: 14px;
     text-align: left;
     float: left;
     margin: 5px -3px;
     padding: 2px 3px;
     border: 0;
-    font-weight: bold;
+
 }
 .create-button{
     font-family: "Google Sans",Roboto,Arial,sans-serif;
     border-radius: 4px;
-    color: rgba(26, 115, 232, 0.85);
+    color: rgb(26,115,232);
     display: inline-block;
     font-weight: 500;
     letter-spacing: 0.25px;
@@ -90,13 +91,12 @@ body {
     position: relative;
     background-color: transparent;
     cursor: pointer;
-    font-size: inherit;
+    font-size: 14px;
     text-align: left;
     float: left;
     margin: 5px -3px;
     padding: 7px 5px;
     border: 0;
-    font-weight: bold;
 }
 .create-button:hover{
     color: rgba(23, 78, 166, 0.91);
@@ -141,7 +141,7 @@ body {
     color: #fff;
     border: none;
     border-radius: 4px;
-    padding: 10px;
+    padding: 5px;
     width: 60px;
     font-size: 14px;
     cursor: pointer;
@@ -167,10 +167,19 @@ body {
     padding-right: 0px;
 }
 .show-user{
+    -moz-box-align: center;
+    align-items: center;
     padding: 5px 5px 3px;
+    color: rgb(60,64,67);
+    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .25px;
+    cursor: pointer;
+    display: inline-flex;
     margin-bottom: 30px;
     text-align: center;
-    border: rgba(128, 128, 128, 0.3) 1px solid;
+    border: 1px solid rgb(218,220,224);
     display:inline-flex;
     border-radius: 15px;
 
@@ -214,19 +223,80 @@ input:focus ~ .floating-label{
 }
 .welcome{
     color: black;
-    font-size: 24px;
+    font-size: 23px;
     font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
     font-weight: 400;
     line-height: 1.3333;
     word-break: break-word;
-    padding-top: 10px;
+    padding-top: 15px;
+}
+p.welcome, p.head{
+    margin-bottom: 0.5rem;
 }
 input[type="checkbox"] {
     width: 17px;
     height: 17px;
-    border-color: #357ae8;
+    border: #6c6969 solid 2px;
+    border-radius: 2px !important;
+    cursor: pointer;
+}
+.form-check-input:focus{
+    border: #7d7b7b solid 2px;
+    border-radius: 2px !important;
+    box-shadow: none;
+}
+.form-check-input[type=checkbox]:checked {
+    background-image: none;
+    background-color: #3b71ca;
+}
+.form-check-input:checked:focus:before, .form-check-input:checked:hover:before {
+    box-shadow: 0px 0px 0px 13px #3b71ca;
+}
+.form-check-input:not(:checked):hover:before, .form-check-input:not(:checked):focus:before{
+    box-shadow: 0px 0px 0px 13px gray;
+    background-color: gray;
+}
+.form-check-input:focus:before, .form-check-input:hover:before {
+    transform: scale(1);
+}
+.form-check-input:focus:before, .form-check-input:hover:before {
+    content: "";
+    position: absolute;
+    box-shadow: 0px 0px 0px 13px rgba(0,0,0,0);
+    border-radius: 50%;
+    width: 0.875rem;
+    height: 0.875rem;
+}
+.form-check-input:checked:focus:before {
+    opacity: .1 !important;
+}
+.form-check-input:not(:checked):focus:before {
+    opacity: .1 !important;
+}
+.form-check-input:hover:before {
+    opacity: .05;
+}
+.form-check-input[type=checkbox]:checked:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    border-radius: 0;
+    display: block;
+    transform: rotate(45deg);
+    border-width: 0.125rem;
+    border-color: #fff;
+    width: 0.3rem;
+    height: 0.8125rem;
+    border-style: solid;
+    border-top: 0;
+    border-left: 0;
+    margin-left: 0.25rem;
+    margin-top: -1px;
+    background-color: rgba(0,0,0,0);
+}
+.form-check-input:checked {
+     border-color: #3b71ca;
 }
 input[type="password"] {
     font-size: 30px;
-
 }
